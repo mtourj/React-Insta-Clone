@@ -42,6 +42,13 @@ const Post = props => {
             </button>
           </span>
         </section>
+        <section className='likes'>
+          <div className='layer1'>
+            <div className='layer2'>
+              <a href="#">{props.data.likes.toString()} likes</a>
+            </div>
+          </div>
+        </section>
         <CommentSection comments={props.data.comments} />
       </div>
     </article>

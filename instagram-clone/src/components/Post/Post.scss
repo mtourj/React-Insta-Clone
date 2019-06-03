@@ -210,5 +210,41 @@
         }
       }
     }
+
+    .likes {
+      flex-direction: row;
+      justify-content: flex-end;
+      margin-bottom: 8px;
+      align-items: stretch;
+      box-sizing: border-box;
+      display: flex;
+      position : relative;
+
+      .layer1 {
+        flex: 1 1 auto;
+        justify-content: flex-start;
+        flex-direction: row;
+        align-items: stretch;
+        align-content: stretch;
+
+        .layer2 {
+          align-items: center;
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          flex: 1 1 auto;
+          justify-content: start;
+          white-space: pre;
+          margin: 0;
+          padding: 0;
+
+          a {
+            color: #262626;
+            text-decoration: none;
+            font-weight: 600;
+          }
+        }
+      }
+    }
   }
 }
