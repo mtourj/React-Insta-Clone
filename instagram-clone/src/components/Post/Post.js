@@ -19,7 +19,31 @@ const Post = props => {
           </div>
         </div>
       </div>
-      <CommentSection comments={props.data.comments} />
+      <div className='bottom-section'>
+        <section className='actions'>
+          <span className='like'>
+            <button className='btn'>
+              <span className='icon' />
+            </button>
+          </span>
+          <span className='comment'>
+            <button className='btn'>
+              <span className='icon' />
+            </button>
+          </span>
+          <span className='share'>
+            <button className='btn'>
+              <span className='icon' />
+            </button>
+          </span>
+          <span className='save'>
+            <button className='btn'>
+              <span className='icon' />
+            </button>
+          </span>
+        </section>
+        <CommentSection comments={props.data.comments} />
+      </div>
     </article>
   );
 };
