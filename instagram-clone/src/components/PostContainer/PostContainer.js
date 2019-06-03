@@ -1,17 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import CommentSection from "../CommentSection/CommentSection";
+import Post from '../Post/Post';
 import './PostContainer.scss';
 
 export default class PostContainer extends React.Component {
+  posts = this.props.data.map (post => {
+    return <Post data={post} key={post.id}/>;
+  })
+
   render (){
     return (
       <div className='post-container'>
-        Posts go here
-        <div className='post'>
-          {/* blah blah blah */}
-          <CommentSection comments={this.props.data[0].comments} />
-        </div>
+        {this.posts}
       </div>
     )
   }

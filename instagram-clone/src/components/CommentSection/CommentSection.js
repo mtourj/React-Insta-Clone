@@ -1,11 +1,11 @@
 import React from 'react';
 
 const CommentSection = props => {
+  let comments = props.comments.map (comment => <p key={comment.id}>{comment.username}: {comment.text}</p>);
+
   return (
     <div className='comment-section'>
-      Comment Section goes here.
-      {/* Example of first comment, needs to be looped over */}
-      <p>{props.comments[0].username}: {props.comments[0].text}</p>
+      {comments}
     </div>
   );
 };

@@ -9,13 +9,14 @@
   flex-direction: column;
   position: relative;
   flex-basis: 75px;
-
+  
   .root {
     position: fixed;
     height: 77px;
     z-index: 1;
     width: 100%;
     align-items: center;
+    background: white;
     border-bottom: 1px solid rgba(0, 0, 0, 0.0975);
     display: flex;
     flex-direction: column;
