@@ -53,6 +53,12 @@ const Post = props => {
         <section className='timestamp'>
           {props.data.timestamp}
         </section>
+        <section className='comment-field'>
+          <form className='layer1'>
+            <textarea placeholder='Add a comment...' />
+            <button>Post</button>
+          </form>
+        </section>
       </div>
     </article>
   );
