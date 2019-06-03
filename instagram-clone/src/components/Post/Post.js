@@ -26,7 +26,7 @@ const Post = props => {
               <span className='icon' />
             </button>
           </span>
-          <span className='comment'>
+          <span className='a-comment'>
             <button className='btn'>
               <span className='icon' />
             </button>
@@ -50,6 +50,9 @@ const Post = props => {
           </div>
         </section>
         <CommentSection comments={props.data.comments} />
+        <section className='timestamp'>
+          {props.data.timestamp}
+        </section>
       </div>
     </article>
   );

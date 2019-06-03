@@ -133,7 +133,7 @@
         }
       }
 
-      .comment {
+      .a-comment {
         display: inline-block;
         .btn {
           min-height: 40px;
@@ -245,6 +245,17 @@
           }
         }
       }
+    }
+
+    .timestamp {
+      font-size: 10px;
+      letter-spacing: 0.2px;
+      line-height: 18px;
+      text-transform: uppercase;
+      cursor: pointer;
+      color: #999;
+      margin-bottom: 5px;
+      text-decoration: none;
     }
   }
 }
