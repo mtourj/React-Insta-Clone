@@ -27,8 +27,8 @@ const dummyData = [
     {
         id: "b",
         username: "twitch",
-        thumbnailUrl: 'https://instagram.fbna1-1.fna.fbcdn.net/vp/81f608ddb76a034e06c0d1669e7e2b48/5B35C840/t51.2885-19/10684037_1512272482349821_444823433_a.jpg',
-        imageUrl: 'https://instagram.fbna1-1.fna.fbcdn.net/vp/830c01ad7ceb325547fd1d4d1a1e6897/5B465520/t51.2885-15/e35/25006313_192089151354555_3374696275667582976_n.jpg',
+        thumbnailUrl: 'https://pngimg.com/uploads/twitch/twitch_PNG22.png',
+        imageUrl: 'https://image.redbull.com/rbcom/052/2017-07-16/14d63e0a-1fc9-4d95-ab71-668c183af7d7/0010/1/1050/553/1/evo-2017-top-8-highlights-marvel.jpg',
         likes: 4307,
         timestamp: "July 15th 2017, 03:12:09 pm",
         comments: [
@@ -62,8 +62,8 @@ const dummyData = [
     {
         id: "c",
         username: "playhearthstone",
-        thumbnailUrl: 'https://instagram.fbna1-1.fna.fbcdn.net/vp/51d5b37438ae3a47df37b7ed3fda141f/5B4ABAA7/t51.2885-19/s150x150/13398400_140638743023210_310840336_a.jpg',
-        imageUrl: 'https://instagram.fbna1-1.fna.fbcdn.net/vp/22618be7ee2a2b676d13e8d70d7d5e08/5B40BF6B/t51.2885-15/e35/25038917_1978298569058775_6081161469041311744_n.jpg',
+        thumbnailUrl: 'https://scontent-sjc3-1.cdninstagram.com/vp/e1c615d2ee634d3b018136647e4881cf/5D9BFDA7/t51.2885-19/s150x150/13398400_140638743023210_310840336_a.jpg?_nc_ht=scontent-sjc3-1.cdninstagram.com',
+        imageUrl: 'https://scontent-sea1-1.cdninstagram.com/vp/9a9f43a4b09da102438a2abe02590f4e/5D94691F/t51.2885-15/e35/60148466_592141294609097_8523196478956975711_n.jpg?_nc_ht=scontent-sea1-1.cdninstagram.com&ig_cache_key=MjA1MDI3MzE0NDE2NTQ2NzI1NQ%3D%3D.2',
         likes: 5306,
         timestamp: "July 14th 2017, 10:04:08 am",
         comments: [
