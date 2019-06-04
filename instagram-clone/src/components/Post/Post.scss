@@ -131,6 +131,10 @@
             width: 24px;
             background-image: url(https://www.instagram.com/static/bundles/es6/sprite_glyphs_c8c6b3ac563b.png/c8c6b3ac563b.png);
           }
+
+          .icon.active {
+            background-position: -271px -208px!important;
+          }
         }
       }
 

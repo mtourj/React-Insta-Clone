@@ -6,7 +6,8 @@ import CommentSection from "../CommentSection/CommentSection";
 export default class Post extends React.Component {
 
   state = {
-    commentInput: ''
+    commentInput: '',
+    liked: false
   }
 
   updateCommentInput = event => {
@@ -34,6 +35,11 @@ export default class Post extends React.Component {
     this.setState( {commentInput: ''} );
   }
 
+  likePost = async like => {
+    if(typeof like === 'boolean') await this.setState({liked: like});
+    else await this.setState({liked: !this.state.liked});
+  }
+
   render () {
   return (
     <article className="post">
@@ -41,7 +47,7 @@ export default class Post extends React.Component {
         <img className='thumbnail' src={this.props.data.thumbnailUrl} alt={this.props.data.username}/>
         <p>{this.props.data.username}</p>
       </header>
-      <div className="image">
+      <div onDoubleClick={() => this.likePost(true)} className="image">
         <div className="layer1">
           <div className="layer2">
             <div className="layer3">
@@ -53,8 +59,8 @@ export default class Post extends React.Component {
       <div className='bottom-section'>
         <section className='actions'>
           <span className='like'>
-            <button className='btn'>
-              <span className='icon' />
+            <button onClick={this.likePost} className='btn'>
+              <span className={this.state.liked ? 'icon active' : 'icon'} />
             </button>
           </span>
           <span className='a-comment'>
