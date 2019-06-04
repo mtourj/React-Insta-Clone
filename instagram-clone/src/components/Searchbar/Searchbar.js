@@ -1,7 +1,7 @@
 import React from "react";
 import "./Searchbar.scss";
 
-const Searchbar = () => {
+const Searchbar = props => {
   return (
     <div className="header">
       <div className="root">
@@ -14,13 +14,7 @@ const Searchbar = () => {
             </div>
           </div>
           <div className="searchbar">
-            <input type="text" placeholder='Search' className='input'/>
-            <div className='layer1'>
-              <div className='layer2'>
-                <span className='icon' />
-                <span className='text' >Search</span>
-              </div>
-            </div>
+            <input onChange={props.updateQuery} type="text" placeholder='Search' className='input'/>
           </div>
           <div className="nav">
             <div className='buttons'>

@@ -4,11 +4,24 @@ import Post from '../Post/Post';
 import './PostContainer.scss';
 
 export default class PostContainer extends React.Component {
-  posts = this.props.data.map (post => {
-    return <Post data={post} key={post.id}/>;
-  })
 
   render (){
+    this.filteredPosts = this.props.data.filter (el => {
+      console.log("Filtering:");
+      console.log(el);
+      const includes = el.username.includes(this.props.searchQuery);
+      console.log('does this element satisfy search?: ' + includes);
+      return includes;
+    });
+    this.matchesQuery = this.props.data.map(el => el.username.includes(this.props.searchQuery));
+  
+    this.posts = this.filteredPosts.map (post => {
+      return <Post data={post} key={post.id}/>;
+    })
+
+    console.log(this.props.data);
+    console.log(this.matchesQuery);
+
     return (
       <div className='post-container'>
         {this.posts}
