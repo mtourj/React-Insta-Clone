@@ -5,6 +5,9 @@ import PostContainer from "./components/PostContainer/PostContainer";
 import "./App.scss";
 
 export default class App extends React.Component {
+  // im not about to use a lifecycle method just to use it.
+  // used em before, i swear.
+
   render() {
     return (
       <div className="App">

@@ -3,19 +3,40 @@ import moment from 'moment';
 import "./Post.scss";
 import CommentSection from "../CommentSection/CommentSection";
 
-const Post = props => {
+export default class Post extends React.Component {
 
+  state = {
+    commentInput: ''
+  }
+
+  updateCommentInput = event => { this.setState({ commentInput: event.target.value })};
+
+  postComment = event => {
+    event.preventDefault();
+
+    this.props.data.comments.push(
+      {
+        id: (this.props.data.comments.length + 1).toString(),
+        text: this.state.commentInput,
+        username: 'mohammadtourj'
+      }
+    )
+
+    this.setState( {commentInput: ''} );
+  }
+
+  render () {
   return (
     <article className="post">
       <header className="header">
-        <img className='thumbnail' src={props.data.thumbnailUrl} alt={props.data.username}/>
-        <p>{props.data.username}</p>
+        <img className='thumbnail' src={this.props.data.thumbnailUrl} alt={this.props.data.username}/>
+        <p>{this.props.data.username}</p>
       </header>
       <div className="image">
         <div className="layer1">
           <div className="layer2">
             <div className="layer3">
-              <img src={props.data.imageUrl} alt="" />
+              <img src={this.props.data.imageUrl} alt="" />
             </div>
           </div>
         </div>
@@ -46,23 +67,22 @@ const Post = props => {
         <section className='likes'>
           <div className='layer1'>
             <div className='layer2'>
-              <a href="#">{props.data.likes.toString()} likes</a>
+              <span>{this.props.data.likes.toString()} likes</span>
             </div>
           </div>
         </section>
-        <CommentSection comments={props.data.comments} />
+        <CommentSection comments={this.props.data.comments} />
         <section className='timestamp'>
-          {moment(props.data.timestamp, 'MMMM Do YYYY, hh:mm:ss a').fromNow()}
+          {moment(this.props.data.timestamp, 'MMMM Do YYYY, hh:mm:ss a').fromNow()}
         </section>
         <section className='comment-field'>
           <form className='layer1'>
-            <textarea placeholder='Add a comment...' />
-            <button>Post</button>
+            <textarea placeholder='Add a comment...' onChange={this.updateCommentInput} value={this.state.commentInput}  />
+            <button onClick={this.postComment} className={this.state.commentInput.trim().length > 0 ? 'active' : ''} type='submit'>Post</button>
           </form>
         </section>
       </div>
     </article>
   );
-};
-
-export default Post;
+}
+}

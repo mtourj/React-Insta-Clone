@@ -234,15 +234,19 @@
           flex-direction: row;
           flex-wrap: wrap;
           flex: 1 1 auto;
-          justify-content: start;
+          justify-content: flex-start;
           white-space: pre;
           margin: 0;
           padding: 0;
 
-          a {
+          span {
+            border: none;
+            background: none;
+            cursor: pointer;
             color: #262626;
             text-decoration: none;
             font-weight: 600;
+            font-size: 16px;
           }
         }
       }
@@ -314,6 +318,16 @@
           text-align: center;
           text-transform: inherit;
           text-overflow: ellipsis;
+          z-index: 1;
+        }
+
+        button.active {
+          opacity: 1;
+          pointer-events: all;
+        }
+
+        button.active:hover {
+          color: #3a9efc;
         }
       }
     }
