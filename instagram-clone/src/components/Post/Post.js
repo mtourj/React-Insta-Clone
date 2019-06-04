@@ -1,4 +1,5 @@
 import React from "react";
+import moment from 'moment';
 import "./Post.scss";
 import CommentSection from "../CommentSection/CommentSection";
 
@@ -51,7 +52,7 @@ const Post = props => {
         </section>
         <CommentSection comments={props.data.comments} />
         <section className='timestamp'>
-          {props.data.timestamp}
+          {moment(props.data.timestamp, 'MMMM Do YYYY, hh:mm:ss a').fromNow()}
         </section>
         <section className='comment-field'>
           <form className='layer1'>
