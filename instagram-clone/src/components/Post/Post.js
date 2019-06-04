@@ -9,10 +9,19 @@ export default class Post extends React.Component {
     commentInput: ''
   }
 
-  updateCommentInput = event => { this.setState({ commentInput: event.target.value })};
+  updateCommentInput = event => {
+
+    event.preventDefault();
+    this.setState({ commentInput: event.target.value});
+  
+  };
 
   postComment = event => {
     event.preventDefault();
+
+    if(this.state.commentInput.trim().lenth < 1){
+      return;
+    }
 
     this.props.data.comments.push(
       {
@@ -76,8 +85,8 @@ export default class Post extends React.Component {
           {moment(this.props.data.timestamp, 'MMMM Do YYYY, hh:mm:ss a').fromNow()}
         </section>
         <section className='comment-field'>
-          <form className='layer1'>
-            <textarea placeholder='Add a comment...' onChange={this.updateCommentInput} value={this.state.commentInput}  />
+          <form onSubmit={this.postComment} className='layer1'>
+            <input placeholder='Add a comment...' onChange={this.updateCommentInput} value={this.state.commentInput}  />
             <button onClick={this.postComment} className={this.state.commentInput.trim().length > 0 ? 'active' : ''} type='submit'>Post</button>
           </form>
         </section>
