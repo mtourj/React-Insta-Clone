@@ -12,7 +12,7 @@ export default class PostContainer extends React.Component {
     this.matchesQuery = this.props.data.map(el => el.username.includes(this.props.searchQuery));
   
     this.posts = this.filteredPosts.map (post => {
-      return <Post data={post} key={post.id}/>;
+      return <Post username={this.props.username} data={post} key={post.id}/>;
     })
 
     return (

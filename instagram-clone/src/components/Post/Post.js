@@ -25,7 +25,7 @@ export default class Post extends React.Component {
     this.props.data.comments.push({
       id: (this.props.data.comments.length + 1).toString(),
       text: this.state.commentInput,
-      username: "mohammadtourj"
+      username: this.props.username
     });
 
     this.setState({ commentInput: "" });
