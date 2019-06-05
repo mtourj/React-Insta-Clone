@@ -1,0 +1,15 @@
+.post-container {
+  display: flex;
+  width: 100%;
+  order: 4;
+  background-color: #fafafa;
+  flex-grow: 1;
+  align-items: stretch;
+  flex-shrink: 0;
+  position: relative;
+  padding-top: 60px;
+  flex-flow: column nowrap;
+  max-width: 935px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
