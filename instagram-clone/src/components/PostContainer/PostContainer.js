@@ -2,8 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Post from '../Post/Post';
 import styled from 'styled-components';
-import './PostContainer.scss';
-import { Z_ASCII } from 'zlib';
 
 export default class PostContainer extends React.Component {
   

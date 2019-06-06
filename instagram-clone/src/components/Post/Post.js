@@ -1,4 +1,5 @@
 import React from "react";
+import styled from 'styled-components';
 import moment from "moment";
 import "./Post.scss";
 import CommentSection from "../CommentSection/CommentSection";
@@ -47,6 +48,8 @@ export default class Post extends React.Component {
   };
 
   render() {
+
+
     return (
       <article className="post">
         <header className="header">
