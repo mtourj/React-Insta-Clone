@@ -1,0 +1,339 @@
+.post {
+  margin-bottom: 60px;
+  border-radius: 3px;
+  border: 1px solid #e6e6e6;
+  background-color: #fff;
+  margin-left: -1px;
+  margin-right: -1px;
+  padding: 0;
+  align-items: stretch;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  .header {
+    height: 60px;
+    padding: 16px;
+    box-sizing: border-box;
+    align-items: center;
+    flex-direction: row;
+    border-bottom: 1px solid #efefef;
+    display: flex;
+    position: relative;
+    margin: 0;
+    justify-content: flex-start;
+    cursor: pointer;
+    z-index: 0;
+
+    .thumbnail {
+      border-radius: 50%;
+      user-select: none;
+      width: 24px;
+      height: 24px;
+      margin-left: 8px;
+      margin-right: 24px;
+    }
+
+    p {
+      color: #262626;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        Helvetica, Arial, sans-serif;
+      font-weight: 600;
+    }
+  }
+
+  .image {
+    align-items: stretch;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    height: 480px;
+    .layer1 {
+      align-items: stretch;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      .layer2 {
+        display: block;
+        width: 100%;
+        align-items: stretch;
+        box-sizing: border-box;
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+        position: relative;
+        height: 100%;
+        .layer3 {
+          display: block;
+          overflow: hidden;
+          align-items: stretch;
+          box-sizing: border-box;
+          flex-direction: column;
+          position: relative;
+          height: 100%;
+          img {
+            object-fit: cover;
+            height: 100%;
+            user-select: none;
+            width: 100%;
+            left: 0;
+            position: absolute;
+            top: 0;
+            margin: 0;
+            padding: 0;
+            border: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .bottom-section {
+    padding: 0 16px;
+    align-items: stretch;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+
+    .actions {
+      margin-top: 4px;
+      flex-direction: row;
+      align-items: stretch;
+      display: flex;
+
+      .like {
+        display: inline-block;
+        margin-left: -8px;
+        .btn {
+          min-height: 40px;
+          min-width: 40px;
+          background: 0 0;
+          cursor: pointer;
+          display: flex;
+          justify-content: center;
+          padding: 0;
+          outline: 0 !important;
+          border: 0;
+
+          .icon {
+            display: block;
+            outline: 0 !important;
+            background-position: -271px -234px;
+            background-repeat: no-repeat;
+            height: 24px;
+            width: 24px;
+            background-image: url(https://www.instagram.com/static/bundles/es6/sprite_glyphs_c8c6b3ac563b.png/c8c6b3ac563b.png);
+          }
+
+          .icon.active {
+            background-position: -271px -208px!important;
+          }
+        }
+      }
+
+      .a-comment {
+        display: inline-block;
+        .btn {
+          min-height: 40px;
+          min-width: 40px;
+          background: 0 0;
+          cursor: pointer;
+          display: flex;
+          justify-content: center;
+          padding: 0;
+          outline: 0 !important;
+          border: 0;
+
+          .icon {
+            display: block;
+            outline: 0 !important;
+            background-position: -161px -202px;
+            background-repeat: no-repeat;
+            height: 24px;
+            width: 24px;
+            background-image: url(https://www.instagram.com/static/bundles/es6/sprite_glyphs_c8c6b3ac563b.png/c8c6b3ac563b.png);
+          }
+        }
+      }
+
+      .share {
+        display: inline-block;
+        .btn {
+          min-height: 40px;
+          min-width: 40px;
+          background: 0 0;
+          cursor: pointer;
+          display: flex;
+          justify-content: center;
+          padding: 0;
+          outline: 0 !important;
+          border: 0;
+
+          .icon {
+            display: block;
+            outline: 0 !important;
+            background-position: -286px -286px;
+            background-repeat: no-repeat;
+            height: 24px;
+            width: 24px;
+            background-image: url(https://www.instagram.com/static/bundles/es6/sprite_glyphs_c8c6b3ac563b.png/c8c6b3ac563b.png);
+          }
+        }
+      }
+
+      .save {
+        display: inline-block;
+        margin-left: auto;
+        margin-right: -10px;
+        .btn {
+          min-height: 40px;
+          min-width: 40px;
+          background: 0 0;
+          cursor: pointer;
+          display: flex;
+          justify-content: center;
+          padding: 0;
+          outline: 0 !important;
+          border: 0;
+
+          .icon {
+            display: block;
+            outline: 0 !important;
+            background-position: -156px -286px;
+            background-repeat: no-repeat;
+            height: 24px;
+            width: 24px;
+            background-image: url(https://www.instagram.com/static/bundles/es6/sprite_glyphs_c8c6b3ac563b.png/c8c6b3ac563b.png);
+          }
+        }
+      }
+    }
+
+    .likes {
+      flex-direction: row;
+      justify-content: flex-end;
+      margin-bottom: 8px;
+      align-items: stretch;
+      box-sizing: border-box;
+      display: flex;
+      position: relative;
+
+      .layer1 {
+        flex: 1 1 auto;
+        justify-content: flex-start;
+        flex-direction: row;
+        align-items: stretch;
+        align-content: stretch;
+
+        .layer2 {
+          align-items: center;
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          flex: 1 1 auto;
+          justify-content: flex-start;
+          white-space: pre;
+          margin: 0;
+          padding: 0;
+
+          span {
+            border: none;
+            background: none;
+            cursor: pointer;
+            color: #262626;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+          }
+        }
+      }
+    }
+
+    .timestamp {
+      font-size: 10px;
+      letter-spacing: 0.2px;
+      line-height: 18px;
+      text-transform: uppercase;
+      cursor: pointer;
+      color: #999;
+      margin-bottom: 5px;
+      text-decoration: none;
+    }
+
+    .comment-field {
+      padding-left: 16px;
+      padding-right: 16px;
+      border-top: 1px solid #efefef;
+      font-size: 14px;
+      line-height: 18px;
+      min-height: 56px;
+      justify-content: center;
+      margin-top: 4px;
+      align-items: stretch;
+      display: flex;
+      flex-direction: column;
+
+      .layer1 {
+        align-items: stretch;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        flex-shrink: 0;
+        position: relative;
+        margin: 0;
+        padding: 0;
+        color: #999;
+
+
+        input {
+          background: 0 0;
+          border: 0;
+          color: #262626;
+          height: 18px;
+          max-height: 80px;
+          outline: 0;
+          padding: 0;
+          resize: none;
+          display: flex;
+          flex-grow: 1;
+          font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+            Helvetica, Arial, sans-serif;
+          line-height: 18px;
+        }
+
+        button {
+          opacity: 0.3;
+          pointer-events: none;
+          border: 0;
+          color: #3897f0;
+          display: inline;
+          padding: 0;
+          background: 0 0;
+          box-sizing: border-box;
+          cursor: pointer;
+          font-weight: 600;
+          text-align: center;
+          text-transform: inherit;
+          text-overflow: ellipsis;
+          z-index: 1;
+        }
+
+        button.active {
+          opacity: 1;
+          pointer-events: all;
+        }
+
+        button.active:hover {
+          color: #3a9efc;
+        }
+      }
+    }
+  }
+}
