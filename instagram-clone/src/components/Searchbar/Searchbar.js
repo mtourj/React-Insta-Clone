@@ -165,24 +165,24 @@ const Searchbar = props => {
   `;
 
   return (
-    <HeaderDiv className="header">
-      <HeaderRoot className="root">
-        <ContentDiv className="content">
-          <Logos className="logos">
-            <Container className='container'>
-              <MiniLogo className='glyphsSpriteApp_instagram__outline__24__grey_9 u-__7'></MiniLogo>
-              <Divider className='divider'></Divider>
-              <WideLogo className='glyphsSpriteMobile_nav_type_logo u-__7'></WideLogo>
+    <HeaderDiv>
+      <HeaderRoot>
+        <ContentDiv>
+          <Logos>
+            <Container>
+              <MiniLogo></MiniLogo>
+              <Divider></Divider>
+              <WideLogo></WideLogo>
             </Container>
-          </Logos>s
-          <SearchSection className="searchbar">
-            <SearchField onChange={props.updateQuery} type="text" placeholder='Search' className='input' />
+          </Logos>
+          <SearchSection>
+            <SearchField onChange={props.updateQuery} type="text" placeholder='Search' />
           </SearchSection>
-          <Navigation className="nav">
-            <Buttons className='buttons'>
-              <div className='explore' />
-              <div className='activity' />
-              <div className='profile' />
+          <Navigation >
+            <Buttons>
+              <Explore />
+              <Activity />
+              <Profile />
             </Buttons>
           </Navigation>
         </ContentDiv>

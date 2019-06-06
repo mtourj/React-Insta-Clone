@@ -1,9 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Post from '../Post/Post';
+import styled from 'styled-components';
 import './PostContainer.scss';
+import { Z_ASCII } from 'zlib';
 
 export default class PostContainer extends React.Component {
+  
+  
   render (){
     this.filteredPosts = this.props.data.filter (el => {
       const includes = el.username.includes(this.props.searchQuery);
@@ -15,10 +19,26 @@ export default class PostContainer extends React.Component {
       return <Post username={this.props.username} data={post} key={post.id}/>;
     })
 
+    const PostContainer = styled.div`
+      display: flex;
+      width: 100%;
+      order: 4;
+      background-color: #fafafa;
+      flex-grow: 1;
+      align-items: stretch;
+      flex-shrink: 0;
+      position: relative;
+      padding-top: 60px;
+      flex-flow: column nowrap;
+      max-width: 935px;
+      margin: 0 auto;
+      box-sizing: border-box;
+    `;
+
     return (
-      <div className='post-container'>
+      <PostContainer>
         {this.posts}
-      </div>
+      </PostContainer>
     )
   }
 }
